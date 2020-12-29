@@ -1,12 +1,7 @@
-package com.example.a4aprojetahratina.injection
+package com.example.a4aprojetahratina
 
-import org.junit.Test
+import org.koin.dsl.module
 
-import org.junit.Assert.*
-
-class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
+val presentationModule = module {
+    factory { MainViewModel() }
 }
