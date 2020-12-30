@@ -1,6 +1,8 @@
 package com.example.a4aprojetahratina.injection
 
 import android.app.Application
+import com.example.a4aprojetahratina.dataModule
+import com.example.a4aprojetahratina.domainModule
 import com.example.a4aprojetahratina.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -13,7 +15,7 @@ class EsieaApplication : Application() {
             // Android context
             androidContext(this@EsieaApplication)
             // modules
-            modules(presentationModule)
+            modules(presentationModule, domainModule, dataModule)
         }
     }
 }
